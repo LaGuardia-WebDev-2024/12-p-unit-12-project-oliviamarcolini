@@ -1,18 +1,17 @@
 <!-- Unit 12 Project
 Requirements
 [  ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[X] Use Three Different jQuery Methods 
+[X] Add Five CSS Declarations
+[X] Include Three Images
 
 Select ONE Additional 
 [ no ] Feature 1 - Use .addClass() method
 [ no ] Feature 2 - Use a variable in javaScript 
 [ no ] Feature 3 - Use .mouseover() method
-[ no ] Feature 4 - Use .show() method
+[ yes ] Feature 4 - Use .show() method
 [ no ] Feature 5 - Use .append() method
 -->
-
 
 <!DOCTYPE html>
 <html>
@@ -22,40 +21,131 @@ Select ONE Additional
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="mem1-button">Memory #1</button>
-    <button id="mem2-button">Memory #2</button>
-    <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+    <button id="game1-button">Game #1</button>
+    <button id="game2-button">Game #2</button>
+    <button id="game3-button">Game #3</button>
+    <button id="game4-button">Game #4</button>
+    <button id="game5-button">Game #5</button>
+
+    <h1>Ranking the <span class="wow">Life is Strange Franchise</span> </h1>
+
     <ol>
       <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <h3 id="game1">Game #1</h3>
+        <img
+          id="lis2"
+          class="photo"
+          src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000029410/52be3f7eb93e5b9f00ab2a0bf048cb73c30d000b20b06560ef5a60a9cbd6aae7"
+        />
+        <p id="about1">More about this game.</p>
       </li>
 
       <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <h3 id="game2">Game #2</h3>
+        <img
+          id="lisbts"
+          class="photo"
+          src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/554620/header.jpg?t=1728636264"
+        />
+        <p id="about2">More about this game.</p>
       </li>
 
       <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <h3 id="game3">Game #3</h3>
+        <img
+          id="listc"
+          class="photo"
+          src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/936790/header.jpg?t=1724158997"
+        />
+        <p id="about3">More about this game.</p>
+      </li>
+
+      <li>
+        <h3 id="game4">Game #4</h3>
+        <img
+          id="lis"
+          class="photo"
+          src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/319630/header.jpg?t=1724158918"
+        />
+        <p id="about4">More about this game.</p>
+      </li>
+
+      <li>
+        <h3 id="game5">Game #5</h3>
+        <img
+          id="lisde"
+          class="photo"
+          src="https://cdn.glitch.global/ec2975f3-4084-479b-8494-e3a8d56c850c/Screenshot%202025-04-23%20at%2010.04.22%20AM.png?v=1745417075772"
+        />
+        <p id="about5">More about this game.</p>
       </li>
     </ol>
-
+    
+    <h1>
+      Ranking <span class="wow">something else</span>
+    </h1>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+      $("#game1-button").click(function () {
+        $("#game1-button").css("background-color", "Plum");
+        $("#game1-button").css("color", "black");
+
+        $("#game1").text("Life is Strange 2");
+        $("#game1").css("color", "PaleVioletRed");
+        $("#lis2").show(2000);
+
+        $("#about1").html("The best one <em>in my opinion</em>.");
       });
 
-      $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+      $("#game2-button").click(function () {
+        $("#game2-button").css("background-color", "Plum");
+        $("#game2-button").css("color", "black");
+
+        $("#game2").text("Life is Strange Before the Storm");
+        $("#game2").css("color", "Fuchsia");
+        $("#lisbts").show(2000);
+
+        $("#about2").text("I just love this game. So cool to see Chloe's and Rachel's lives before the storm.");
       });
 
-      $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
+      $("#game3-button").click(function () {
+        $("#game3-button").css("background-color", "Plum");
+        $("#game3-button").css("color", "black");
+
+        $("#game3").text("Life is Strange True Colors");
+        $("#game3").css("color", "BlueViolet");
+        $("#listc").show(2000);
+
+        $("#about3").text("Probably unpopular opinion, but I really enjoyed lis True Colors. I loved the D&D narrative, it was so wholesome and it made me like Steph even more.");
       });
+
+      $("#game4-button").click(function () {
+        $("#game4-button").css("background-color", "Plum");
+        $("#game4-button").css("color", "black");
+
+        $("#game4").text("Life is Strange (the OG)");
+        $("#game4").css("color", "DarkCyan");
+        $("#lis").show(2000);
+
+        $("#about4").text("Yes the OG. Really good, was definitely not expecting that ending. Very well crafted with the butterfly effect and the consequences of changing the past. Bae over bay forever.");
+      });
+
+      $("#game5-button").click(function () {
+        $("#game5-button").css("background-color", "Plum");
+        $("#game5-button").css("color", "black");
+
+        $("#game5").text("Life is Strange Double Exposure");
+        $("#game5").css("color", "DarkSlateBlue");
+        $("#lisde").show(2000);
+
+        $("#about5").text("Well... just overall disappointing. I was expecting SO MUCH MOREEE!!");
+      });
+
+      $(".wow").click(function () {
+        $(".wow").css("color", "plum");
+      });
+      
+      $("h3").css("color", "plum");
     </script>
   </body>
 </html>
